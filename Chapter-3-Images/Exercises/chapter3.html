@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <style>
+        body {
+            font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: lavender; /* Changed background color */
+        }
+
+        nav {
+            background-color: #2c3e50; /* Changed navigation background color */
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px; /* Increased margin at the bottom */
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px; /* Increased margin between links */
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #34495e; /* Changed navigation hover background color */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: lightsteelblue; /* Changed background color */
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 40px; /* Increased margin bottom for heading */
+            text-align: center;
+            color: #2c3e50; /* Changed heading color */
+        }
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px; /* Increased gap between images */
+        }
+
+        .image-set {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .image-set img {
+            max-width: calc(33.33% - 20px);
+            height: auto;
+            border-radius: 15px; /* Decreased border radius for images */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .image-set img.duplicate1 {
+            filter: sepia(100%);
+        }
+
+        .image-set img.duplicate2 {
+            filter: brightness(0.8);
+        }
+
+        .image-set img.duplicate3 {
+            filter: grayscale(100%);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Gallery</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h1>Discover Stunning Views</h1> <!-- Changed heading text -->
+        <div class="image-container">
+            <!-- New Images -->
+            <div class="image-set">
+                <img src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg" alt="Mountain Lake" title="Mountain Lake">
+                <img src="https://images.pexels.com/photos/210186/pexels-photo-210186.jpeg" alt="City at Night" title="City at Night">
+                <img src="https://images.pexels.com/photos/34950/pexels-photo.jpg" alt="Vibrant Forest" title="Vibrant Forest">
+            </div>
+            
+            <!-- Filtered Duplicates -->
+            <div class="image-set">
+                <img src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg" alt="Mountain Lake" title="Mountain Lake" class="duplicate1">
+                <img src="https://images.pexels.com/photos/210186/pexels-photo-210186.jpeg" alt="City at Night" title="City at Night" class="duplicate2">
+                <img src="https://images.pexels.com/photos/34950/pexels-photo.jpg" alt="Vibrant Forest" title="Vibrant Forest" class="duplicate3">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
